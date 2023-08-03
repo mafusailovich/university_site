@@ -1,0 +1,29 @@
+body {
+    font-family: 'Roboto';
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section-titles {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35.16px;
+    color: #013CD3;
+}
+
+.main__body {
+    padding-top: 64px;
+    background-color: #F2F2F2;
+}
+
+.main__container {
+    padding-left:120px;
+}
+
+@import 'fonts',
+'nullst', 'header',
+'choose-spec', 'statistics', 'useful-know',
+'news','footer';

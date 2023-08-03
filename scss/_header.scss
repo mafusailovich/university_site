@@ -1,0 +1,163 @@
+%dflex {
+    display: flex;
+    justify-content: space-between;
+    align-items:last center;
+}
+
+%header-menu-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff;
+    width: 100%;
+}
+
+.header {
+    font-family: "Lao MN";
+    &__body {
+        position: relative;
+        width: 100%;
+        height: 71vw; //примерно 1024px при 1440px разрешении
+        background-image: url("/images/header/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+    }
+    &__burger {
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+        left: 50px;
+    }
+    &-menu {
+        padding: 79px 165px 0px 122px;
+    }
+    &-menu__body {
+        @extend %dflex;
+    }
+    &-menu__item {
+        @extend %header-menu-text;
+        &:hover{
+            border-bottom: 1px solid #FFFFFF80;
+        }
+    }
+    &__logo {
+        top:-9px;
+        margin: 0px 51px 0px 17px;
+    }
+}
+
+.logo {
+    position: relative;
+    //думаю, что здесь уместно данное позиционирование, чтобы блок был более независим
+    &__img {
+        width: 80px;
+        height: 63px;
+    }
+    &__text {
+        @extend %header-menu-text;
+        text-shadow:
+            1px 0px 1px #000,
+            0px 1px 1px #000,
+            -1px 0px 1px #000,
+            0px -1px 1px #000;
+        position: absolute;
+        top: 29px;
+        left: 26px;
+        &--big {
+            font-size: 33px;
+            line-height: 45.31px;
+        }
+    }
+    &--right {
+        display: none;
+    }
+}
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    &__item {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #fff;
+    }
+    &:hover {
+        box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.6);
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        &__body {
+            height: 1024px;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .header {
+        &-menu {
+            padding: 79px 15px 0px 15px;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .burger-btn {
+        display: flex;
+    }
+    .header {
+        &__burger {
+            position: absolute;
+            z-index: 10;
+            top: 30px;
+            left: 15px;
+        }
+        &-menu {
+            display: block;
+            padding: 85px 0px 0px 0px;
+            transform-origin: 15px 75px;
+            transform: scale(0,0);
+            transition: all 0.3s linear 0.2s;
+        }
+        &-menu--active {
+            transform: scale(1,1);
+        }
+        &-menu__body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 200px;
+            max-width: max-content;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        &-menu__middle {
+            display: none;
+        }
+        &__logo {
+            position: absolute;
+            margin: 0 0;
+            top: 19px;
+            right: 63px;
+        }
+    }
+    .logo {
+        &--right {
+            display: block;
+        }
+    }
+}

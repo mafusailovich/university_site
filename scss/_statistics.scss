@@ -1,0 +1,156 @@
+.statistics {
+    background-color: #e9e9e9;
+    color: #a60000;
+    padding-top: 37px;
+    padding-bottom: 63px;
+    &__title {
+        margin-bottom: 21px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(290px, 590px));
+        justify-items: center;
+        column-gap: 46px;
+        row-gap: 30px;
+        margin-right: 94px;
+    }
+    &__cards-col {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 180px));
+        column-gap: 25px;
+        row-gap: 21px;
+    }
+    &__card {
+        height: 14.93vw;
+        border-radius: 30px;
+        background-color: #d5d5d5;
+        position: relative;
+        padding-top: 5.97vw;
+        text-align: center;
+    }
+    &__card--long {
+        grid-column: 1 / 4;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__card--students {
+        background-image: url("/images/main/statistics/students_2.jpg");
+    }
+    &__card--cafedra {
+        background-image: url("/images/main/statistics/students_1.jpg");
+    }
+    &__card--red {
+        background-color: #a60000;
+        color: #fff;
+    }
+    &__card-icon {
+        position: absolute;
+        top: 15px;
+        left: 16px;
+    }
+    &__card-title {
+        font-weight: 900;
+        font-size: 2.56vw;
+        line-height: 3vw;
+    }
+    &__card-subtitle {
+        font-weight: 300;
+        font-size: 1.38vw;
+        line-height: 1.62vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .statistics {
+        &__card {
+            height: 215px;
+            padding-top: 86px;
+        }
+        &__card-title {
+            font-size: 37px;
+            line-height: 43.36px;
+        }
+        &__card-subtitle {
+            font-size: 20px;
+            line-height: 23.44px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .statistics {
+        &__card-title {
+            font-weight: 900;
+            font-size: 2vw;
+            line-height: 3vw;
+        }
+    }
+}
+
+@media (max-width: 1047px) {
+    .statistics {
+        &__title {
+            text-align: center;
+        }
+        &__cards {
+            grid-template-columns: minmax(290px, 590px);
+            justify-content: center;
+            margin-right: 10px;
+        }
+        &__card-title {
+            font-size: 37px;
+            line-height: 43.36px;
+        }
+        &__card-subtitle {
+            font-size: 20px;
+            line-height: 23.44px;
+        }
+        &__card {
+            padding-top: 86px;
+            height: 215px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .statistics {
+        &__card-title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__card-subtitle {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__card {
+            padding-top: 70px;
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .statistics {
+        &__card-title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+        &__card-subtitle {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .statistics {
+        &__cards-col {
+            grid-template-columns: 300px;
+            row-gap: 21px;
+        }
+        &__card--long {
+            grid-column: 1 / 2;
+        }
+
+    }
+}
