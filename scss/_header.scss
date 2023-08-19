@@ -48,8 +48,9 @@
 }
 
 .logo {
-    position: relative;
-    //думаю, что здесь уместно данное позиционирование, чтобы блок был более независим
+    &__content{
+        position: relative;
+    }
     &__img {
         width: 80px;
         height: 63px;
