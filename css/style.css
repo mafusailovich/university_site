@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   height: 71vw;
-  background-image: url("/images/header/background.jpg");
+  background-image: url("../images/header/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px 51px 0px 17px;
 }
 
-.logo {
+.logo__content {
   position: relative;
 }
 .logo__img {
@@ -414,10 +414,10 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 .statistics__card--students {
-  background-image: url("/images/main/statistics/students_2.jpg");
+  background-image: url("../images/main/statistics/students_2.jpg");
 }
 .statistics__card--cafedra {
-  background-image: url("/images/main/statistics/students_1.jpg");
+  background-image: url("../images/main/statistics/students_1.jpg");
 }
 .statistics__card--red {
   background-color: #a60000;
@@ -617,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url("/images/main/icons/filtermail.svg");
+  background-image: url("../images/main/icons/filtermail.svg");
   position: absolute;
   top: 10px;
   right: 10px;
